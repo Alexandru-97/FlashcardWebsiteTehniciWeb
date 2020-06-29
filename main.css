@@ -1,0 +1,411 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+    height: 100%;
+    background-color: burlywood;
+    background-size: cover;
+    font-weight: 300;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+#index{
+    display: grid;
+    grid: 
+    "header header header header" 200px
+    "..decks  flashcards.." 200px /
+    1fr minmax(100px,350px) minmax(250px, 500px) 1fr ;
+}
+#study
+{
+    background-color: burlywood;
+    background-size: cover;
+    font-weight: 300;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+nav
+{
+    width: 100%;
+    height: 103px;
+    padding-top: 0%;
+}
+.home-menu
+{
+    background-color:white;
+    grid-area: header;
+    text-align: center;
+}
+.all-decks
+{
+    grid-area: decks;
+}
+.btn
+{
+    cursor: pointer;
+    background: 0;
+    padding: 5px;
+    color: inherit;
+    border: 0;
+    font-size: 1rem;
+    
+}
+.btn.create
+{
+    font-size: 1.3em;
+    font-weight:900 ;
+    margin-right: 0.25em;
+    border: 0;
+}
+.btn.create:hover
+{
+    opacity: 0.5;
+}
+.new-deck
+{
+    background: transparent;
+    border: 0;
+    color: inherit;
+    border-bottom: 1.2px solid currentColor;
+    font-size: 1.1rem;
+    transition: border-bottom 170ms ease-in;
+}
+.new-flashcard
+{
+    background: transparent;
+    border: 0;
+    color: inherit;
+    border-bottom: 1.2px solid currentColor;
+    font-size: inherit;
+    transition: border-bottom 170ms ease-in;
+}
+.new-deck:focus
+{
+border-bottom-width: 3.5px;
+}
+.new-flashcard:focus
+{
+border-bottom-width: 3.5px;
+}
+
+.deck-list
+{
+    font-size: 1.2rem;
+    padding: 20px;
+    line-height: 1.7;
+}
+.deck-name
+{
+    cursor: pointer;
+}
+.deck-name:hover
+{
+    opacity: 0.5;
+}
+
+.deck-name.active
+{
+    font-weight: 750;
+}
+.deck-content
+{
+    width: 400px;
+    height: 350px;
+    transform: translateY(55px);  
+    grid-area: flashcards;
+    background-color: #f4f4f4;
+}
+.flashcard-count
+{
+margin: 0;
+font-size: 1.1rem;
+}
+.delete-flashcard
+{
+    color: inherit;
+    padding: 5px;
+}
+.deck-header
+{
+    padding:20px;
+    background-color: #e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.deck-title
+{
+    margin: 0;
+}
+.deck-body
+{
+    padding:20px;
+}
+nav p
+{
+    font-size: 30px;
+    color: #222;
+    float: left;
+    padding: 9px 5px;
+    line-height: 80px;
+}
+nav ul
+{
+    float: left;
+    line-height: 55px;
+}
+nav ul li
+{
+    float: left;
+    list-style: none;
+    position: relative;
+
+}
+nav ul li a
+{
+    display: block;
+    font-family: arial;
+    font-size: 24px;
+    color: #222;
+    padding: 24px 14px;
+    text-decoration: none;
+}
+nav ul li ul
+{
+    display: none;
+    position: absolute;
+    background-color:white;
+    padding: 10PX;
+    border-radius: 0px 0px 18px 18px;
+}
+nav ul li:hover ul
+{
+    display: block;
+}
+nav ul li ul li 
+{
+    width: 150px;
+    border-radius: 38px;
+}
+nav ul li ul li a
+{
+    padding: 10px 14px;
+}
+nav ul li ul li a:hover
+{
+    background-color: silver;
+}
+.search
+{
+    size: 200px 200px 200px 200px;
+}
+.pick
+{
+    float: initial;
+    width: 50%;
+}
+.checkbox-column
+{
+    padding: 20px;
+    width: 60%;
+    width: 400px;
+}
+.column
+{
+    transform: translate(600px,-600px);
+}
+  .study-content
+  {
+    width: 400px;
+    height: 400px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    width: 400px;
+  }
+  .flashcard-question
+  {
+      transform: translateY(70px);
+  }
+  .column-question
+  {
+    background-color: #f4f4f4;
+    width: 600px;
+    height: 400px;
+    transform: translate(700px,-600px);
+    padding: 20px;
+  }
+  .flashcard-header
+  {
+    padding:0px;
+    justify-content: space-between;
+  }
+  #meniu
+  {
+    min-height: 120px;
+  }
+  #corp
+  {
+      min-height: 500px;
+  }
+
+
+  #login-body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(bg.jpg) no-repeat;
+    background-size: cover;
+  }
+  .login-box{
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+  }
+  .login-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid black;
+    margin-bottom: 50px;
+    padding: 13px 0;
+  }
+  .textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid black;
+  }
+  .textbox i{
+    width: 26px;
+    float: left;
+    text-align: center;
+  }
+  .textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: black;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+  }
+  .login-btn{
+    width: 100%;
+    background: none;
+    border: 2px solid black;
+    color: black;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
+  }
+  
+  .active-deck
+  {
+      font-weight: 900;
+  }
+
+#left-section
+{
+    float: left;
+    transform: translateY(20px);
+    padding-left: 60px;
+}
+
+.arabic-style
+{
+    font-size: 1.2rem;
+    padding: 20px;
+    line-height: 1.7;
+}
+.upper-style
+{
+    font-size: 1.2rem;
+    padding: 20px;
+    line-height: 1.7;
+    list-style: upper-latin;
+}
+.lower-style
+{
+    font-size: 1.2rem;
+    padding: 20px;
+    line-height: 1.7;
+    list-style: lower-latin;
+}
+.roman-style
+{
+    font-size: 1.2rem;
+    padding: 20px;
+    line-height: 1.7;
+    list-style: upper-roman;
+}
+.quiz-container
+{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#quiz
+{
+    opacity: 0;/*(inainte de apasat butonu de start test)*/
+    background-color: lightcyan;
+    width: 700px;
+    height: 2000px;
+    margin: auto;
+}
+#quiz-list
+{
+    transform: translateX(30px);
+    margin: auto;
+}
+#quiz-body
+{
+    position: relative;
+}
+/*#start-quiz
+{
+    width: 200px;
+    height: 100px;
+    font-size: large;
+    background-color: thistle;
+}*/
+
+#start-quiz
+{
+  width: 200px;
+  height: 100px;
+  font-size: large;
+  background-color: thistle;  
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#set-colour
+{
+  width: 100px;
+  height: 30px;
+  background-color: thistle;  
+}
+#colour-change
+{
+    transform: translateX(20px);
+}

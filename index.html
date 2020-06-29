@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Study</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="script.js"></script>
+    <script defer src="tasks.js"></script>
+</head>
+<body id="index">
+    
+    <nav class="home-menu">
+        <p><strong>Flash Study</strong></p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quiz.html">Daily quiz</a></li>
+            <li><a href="#">Finals countdown</a>
+                <ul>
+                    <li id="countdown"></a></li>
+                </ul>
+            </li>
+            <li><a href="log_in.html">Sign out</a></li>
+        </ul>
+    </nav>
+    <div id = "colour-change">
+        <input type="text" id = "valid-colour" placeholder="Type in a background colour" newColourInput>
+        <br>
+        <button id="set-colour">Apply</button>
+   </div>
+    <div class="all-decks">
+       <br>
+       <br>
+       <h3 class="header title">Deck list:</h2> 
+       <ol class="deck-list" data-decks></ol>
+       
+       <form action="" data-new-deck-form>
+           <input
+            type="text"
+            class="new-deck"
+            data-new-deck-input
+            placeholder="new deck name"
+            aria-label="new deck name"
+            >
+        <button 
+        class="btn create"
+        aria-label="create new deck"
+        >+</button>     
+       </form>
+       <br>
+       <h5>Change deck list indices type to:</h5>
+       <form>
+        <input type="radio" class = "indices" id="arabic-numbers" name="indices" value="arabic-style" indices checked>
+        <label for="arabic-numbers">arabic numbers</label><br>
+        <input type="radio" class = "indices" id="upper-case" name="indices" value="upper-style" indices>
+        <label for="upper-case">upper case</label><br>
+        <input type="radio" class = "indices" id="lower-case" name="indices" value="lower-style" indices>
+        <label for="lower-case">lower case</label><br>
+        <input type="radio" class = "indices" id="roman-numbers" name="indices" value="roman-style"indices>
+        <label for="roman-numbers">roman numbers</label><br>
+      </form>
+      <br>
+                      <!--
+      <footer>
+        <div class="contact" id="contact-info">
+            <h6>Contact us through email at: <a href="#">flash_study@gmail.com</a></h6>
+            <h6>Or call our customer service team at: <a href="#">+407xxxxxxxx</a></h6> 
+        </div>
+      </footer>  -->
+      
+    </div>
+    
+    
+       
+    <div class="deck-content" data-deck-display-container>
+        <div class="deck-header">
+           <h3 class="deck-title" data-deck-title></h3>
+           <p class="flashcard-count" data-flashcard-count></p>
+        </div>
+        <div class="deck-body"> 
+            <div class="flashcards" data-flashcards></div>
+            <div class="new flashcard creation">
+                <form action="" data-new-flashcard-form>
+                    <input
+                     type="text"
+                     data-new-flashcard-input
+                     class="new-flashcard"
+                     id="new question"
+                     placeholder="add flashcard"
+                     aria-label="new flashcard name"
+                     >
+                 <button 
+                 class="btn create"
+                 aria-label="create new flashcard"
+                 >+</button>     
+                </form>
+                <!--<form action="">
+                    <input
+                     type="text"
+                     class="new-flashcard"
+                     id="new hint"
+                     placeholder="add hint"
+                     aria-label="new flashcard hint"
+                     >
+                 <button 
+                 class="btn create"
+                 aria-label="create new flashcard"
+                 >+</button>     
+                </form> -->
+            </div>
+            <div class="delete-flashcard">
+                <button class="btn delete" data-delete-deck-button>Delete deck</button>
+                <button class ="btn delete" data-clear-studied-flashcards-button>Clear flashcards</button>
+            </div>
+        </div>
+    </div>   
+    <br>
+    <br>
+    <template id='flashcard-template'> <!--html script care poate fi folosit in js dar nu e displayed in pagina -->
+        <div 
+            class="flashcard">
+            <input type="checkbox" >
+            <label >
+                <span class="custom-checkbox"></span>  
+            </label> 
+        </div>
+    </template>
+</body>
+</html>
